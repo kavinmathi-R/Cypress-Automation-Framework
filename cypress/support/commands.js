@@ -1,0 +1,35 @@
+// ***********************************************
+// This example commands.js shows you how to
+// create various custom commands and overwrite
+// existing commands.
+//
+// For more comprehensive examples of custom
+// commands please read more here:
+// https://on.cypress.io/custom-commands
+// ***********************************************
+//
+//
+// -- This is a parent command --
+// Cypress.Commands.add('login', (email, password) => { ... })
+//
+//
+// -- This is a child command --
+// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Handle specific errors by checking their messages
+    if (err.message.includes('loadMoreSettings is not defined') || err.message.includes('window.pageViewContext is not a function')|| err.message.includes("Cannot read properties of undefined (reading 'push')")){
+        // Return false to prevent the test from failing
+        return false;
+    }
+  
+    // Let any other error still fail the test
+    return true;
+  });

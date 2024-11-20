@@ -25,21 +25,22 @@ This framework is a boilerplate setup for Cypress, offering robust features like
 
 Ensure the following are installed on your machine:
 
-1.	Node.js (Latest stable version).
-2.	npm  (Package manager).
+1.	Node.js (Latest stable version v22.11.0).
+2.	npm  (Package manager 10.9.0).
 3.	A code editor like Visual Studio Code.
-4.GitHub
+4.	GitHub
 
 **Installation**
 1.	Clone the repository:
 
-git clone <repository-url>
-cd <repository-folder>
+git clone repository-url
+
+cd repository-folder
 
 2.	Install dependencies:
 
 **npm init** to setup node project with package.json
-**npm install --save-dev cypress** to install cypress as dev dependency
+**npm install --save-dev cypress** to install cypress(13.15.2) as dev dependency
 
 3.	Open the Cypress test runner:
 
@@ -157,7 +158,7 @@ Safeguard the system against invalid or malicious inputs.
 
 Enhance user confidence in the accuracy and reliability of the search system.
 
-**Additional Test Cases to Consider**
+**Additional Test Cases to consider in Search feature if I could spend more time on the project.**
 While the current tests cover fundamental scenarios, additional test cases could improve test coverage:
 
 **1.Boundary Testing:**
